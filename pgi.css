@@ -1,0 +1,842 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #F0EFED;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 120px;
+}
+
+/* Estilos gerais para o container-login */
+.container-login {
+  width: 350px;
+  margin: 200px auto 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo do título */
+.container-login h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilo da descrição pequena */
+.container-login .small {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+.container-login form {
+  margin-top: 20px;
+}
+
+/* Estilos dos campos de entrada */
+.container-login .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Estilos para os rótulos */
+.container-login label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  text-align: left;
+}
+
+/* Checkbox para mostrar a senha */
+.container-login .mt-2 {
+  text-align: left;
+}
+
+/* Estilos para o botão de envio */
+.container-login .btn-success {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-login .btn-success:hover {
+  background-color: #218838;
+}
+
+/* Responsividade para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  .container-login {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .container-login h1 {
+      font-size: 24px;
+  }
+
+  .container-login .form-control {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .container-login .btn-success {
+      font-size: 16px;
+      padding: 8px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+  .container-login h1 {
+      font-size: 22px;
+  }
+
+  .container-login .form-control {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  .container-login .btn-success {
+      font-size: 14px;
+      padding: 6px;
+  }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navv{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.text{
+  margin: 50px auto 30px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+
+}
+
+.header-logo {
+    height: 200px;
+    align-items: center;
+}
+
+.user-logo {
+    width: 30px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #F0EFED;
+    margin-right: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu-links a {
+    color: #F0EFED;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu-links a:hover {
+    color: #D98723;
+}
+
+
+/* Estilos para telas pequenas (responsivo) */
+@media screen and (max-width: 767px) {
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        top: 30px;
+        left: 0;
+        width: 85%;
+        height: 100vh;
+        background-color: #0d0d0d;
+        z-index: 999;
+        transform: translateX(-100%); /* Inicia fora da tela */
+        opacity: 0; /* Invisível no início */
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+    }
+
+    .menu-links.show {
+        transform: translateX(0); /* Quando "show" é aplicado, traz para a tela */
+        opacity: 1; /* Torna visível */
+    }
+  
+    .menu-links a {
+        padding: 20px;
+        border-bottom: 1px solid #F0EFED;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+
+    }
+
+    .header-logo {
+        height: 150px;
+    }
+
+    .user-logo {
+        width: 30px;
+        height: 24px;
+    }
+}
+
+
+@media screen and (min-width: 767px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .close-menu {
+        display: none;
+    }
+}
+
+  .produto {
+    flex: 1 1 20%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(255, 203, 60);
+    box-shadow: 0 0 10px rgb(255, 203, 60);
+    max-width: 340px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px rgb(214, 159, 6);
+  }
+  
+  .produto-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  #properties {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: center;
+  }
+  
+  .property {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .property-link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  #search-form {
+    max-width: 800px;
+    margin: 30px auto 0px;
+    padding: 40px 10px 40px 70px;
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 203, 60);
+    box-shadow: 0 0 10px rgb(255, 203, 60);
+    border-radius: 10px;
+  }
+  
+  #search-input {
+    width: 97.3%;
+    height: 50px;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid #d6d6d6;
+  }
+  
+  #property-type, #location {
+    width: 100%;
+    display: inline-block;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 20px;
+  }
+  
+  #search-btn {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 203, 60);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #search-btn:hover {
+    background-color: rgb(255, 187, 0);
+  }
+  
+  #search-results {
+    margin-top: 20px;
+  }
+  
+  .search-result {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .search-result h2 {
+    margin-top: 0;
+  }
+  
+  .search-result p {
+    margin-bottom: 10px;
+  }
+  
+  @keyframes skeleton-loading {
+    0% { background-color: #c2cfd6; }
+    to { background-color: #f0f3f5; }
+  }
+  
+  .carousel-fluid {
+    position: relative;
+    background-color: #fff;
+    height: 32vh;
+    margin: 120px 0 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-fluid {
+        height: 43vh;
+    }
+}
+
+.carousel-fluid__list {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    gap: 10px; /* Espaço entre as imagens */
+}
+
+.carousel-fluid__list::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-fluid__image {
+    background-color: #f2f2f2;
+    height: 100%;
+    flex: 0 0 calc(33.33% - 10px); /* Exibe 3 imagens por vez com espaço entre elas */
+    object-fit: contain; /* Mantém a proporção das imagens */
+    cursor: pointer;
+}
+
+.carousel-fluid__image:last-of-type {
+    margin-right: 0;
+}
+
+.carousel-fluid__icon {
+    height: 24px;
+    width: 24px;
+}
+
+.carousel-fluid__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    border: none;
+    background: hsla(0, 0%, 100%, .48);
+    box-shadow: 7px 0 22px rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+
+.carousel-fluid__button--next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.carousel-fluid__button--prev {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.carousel-fluid__button:hover {
+    background: hsla(0, 0%, 100%, .7);
+}
+
+  .property-details {
+    margin: 40px 200px;
+  }
+  
+  .contact-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 40px;
+    border: 1px solid rgb(255, 203, 60);
+    box-shadow: 0 0 10px rgb(255, 203, 60);
+  }
+  
+  .contact-form .form-label {
+    font-weight: bold;
+  }
+  
+  .contact-form .form-control {
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 767px) {
+    .contact-form {
+      width: 100%;
+    }
+  }
+  
+  .social-icons {
+    padding: 20px;
+    max-width: 25%;
+    text-align: center;
+    position: relative;
+    justify-content: space-evenly;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 767px) {
+    /* Ajuste do cabeçalho */
+    header {
+      height: auto;
+      flex-direction: column;
+      padding: 8px;
+    }
+  
+    .header-logo {
+      max-height: 150px;
+      margin-top: 0;
+    }
+  
+    /* Ajuste das propriedades */
+    #properties {
+      margin: 10px 10px;
+      padding: 10px;
+      flex-direction: column;
+    }
+  
+    .produto {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .produto img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Ajuste dos formulários */
+    #search-form {
+      margin: 20px 10px;
+      padding: 20px;
+    }
+  
+    .property-details {
+      margin: 20px;
+    }
+  
+    .carousel-fluid {
+      margin: 100px 0 0;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  .topo_crm {
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+
+.topo_crm h1 {
+    font-size: 1.8rem;
+    color: #2e2e2e;
+}
+
+/* Estágios e clientes */
+.stage {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stage h5 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.client-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.client {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.client p, .client strong {
+    margin-bottom: 5px;
+}
+
+/* Divisória entre clientes */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+
+/* Estilo do container do usuário */
+.container-user {
+  max-width: 600px;
+  margin: 140px auto 10px; /* Centraliza verticalmente e horizontalmente */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+/* Estilo do formulário */
+.profile-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilo da imagem do perfil */
+.profile-image {
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+#uploadDiv {
+  margin-top: 10px;
+}
+
+/* Estilo para as seções de input */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Alinha o texto dos labels à esquerda */
+}
+
+/* Estilos Personalizados */
+.container-docs {
+  max-width: 600px;
+  margin: 20px auto 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-docs h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.document-box {
+  margin-bottom: 15px;
+}
+
+.document-box label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Proponentes escondidos inicialmente */
+#proponentes {
+  display: none;
+  margin-top: 20px;
+}
+
+.container-admin {
+  width: 400px;
+  margin: 200px auto 500px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo do título */
+.container-admin h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo dos botões */
+.container-admin .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container-admin {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .container-admin h1 {
+      font-size: 20px;
+  }
+
+  .container-admin .btn {
+      font-size: 16px;
+      padding: 8px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+  .container-admin h1 {
+      font-size: 18px;
+  }
+
+  .container-admin .btn {
+      font-size: 14px;
+      padding: 6px;
+  }
+}
+
+.container-admin .btn {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#proponente_fields {
+  display: none;
+}
+
+.form-container {
+  margin-top: 10px;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.footer-basic {
+  margin-top: 100px;
+  padding:40px 0;
+  background-color:#f0f0f0;
+  color:#3a3a3a;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#616161;
+  margin-bottom:0;
+}
