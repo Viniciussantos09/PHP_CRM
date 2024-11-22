@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Nov-2024 às 22:00
+-- Tempo de geração: 22-Nov-2024 às 18:55
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.0.30
 
@@ -160,16 +160,6 @@ CREATE TABLE `cliente` (
   `Data_hora` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Extraindo dados da tabela `cliente`
---
-
-INSERT INTO `cliente` (`Id_cliente`, `idUser`, `Nome_Completo`, `IdImovel`, `E_MAIL`, `Telefone`, `Descricao`, `Estagio`, `Data_hora`) VALUES
-('AoyBYcVKstiGAYrX', 2, 'Alef Jesus', 4, 'alef_endless@gmail.com', '19 99102-9276', 'gostou', 5, '2024-11-08 19:40:07'),
-('fSw7chZpMMI8SmGC', 1, 'Rafael Oliveira', 9, 'rafael_endless@gmail.com', '19 99102-9675', 'vai deixar mais para frente', 10, '2024-11-08 20:31:49'),
-('lNtL5woVYgsrJjNZ', 4, 'José Aviador', 8, 'Jose@gmail.com', '19 998453624', 'Cliente vai enviar documentação', 7, '2024-11-19 13:51:45'),
-('vhgJEmGDahtXe25t', 1, 'ERICA DANIELLE DA SILVA SANTOS', 4, 'lv.doces3@gmail.com', '19991950356', 'r5wr6j6j', 5, '2024-11-08 20:32:52');
-
 -- --------------------------------------------------------
 
 --
@@ -200,15 +190,6 @@ CREATE TABLE `documentos` (
   `outros_II` varchar(255) DEFAULT NULL,
   `Data_hora` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Extraindo dados da tabela `documentos`
---
-
-INSERT INTO `documentos` (`IdDocumento`, `Id_cliente`, `idUser`, `RG_CPF`, `Carteira_Trabalho`, `Certidao_Casamento_Nascimento`, `Holerites`, `Comprovante_Residencia`, `FGTS`, `Imposto_Renda`, `Ficha_COHAB`, `Ficha_MOP`, `Ficha_Cadastral`, `RG_CPF_prop`, `Carteira_Trabalho_prop`, `Holerites_prop`, `FGTS_prop`, `Imposto_Renda_prop`, `Dependente`, `outros_I`, `outros_II`, `Data_hora`) VALUES
-(3, 'AoyBYcVKstiGAYrX', 2, 'documentos/AoyBYcVKstiGAYrX_672e6a1366691.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a13667c7.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a1366a7f.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a1366b8e.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a1366c97.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a1366fa6.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a13670a9.pdf', NULL, 'documentos/AoyBYcVKstiGAYrX_672e6a1366ea2.pdf', 'documentos/AoyBYcVKstiGAYrX_672e6a1366d9e.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-11-08 19:44:19'),
-(4, 'vhgJEmGDahtXe25t', 1, 'documentos/673ba0d3d304e.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c3a91.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c3c41.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c3d73.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c3eb8.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca521.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca6dc.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca1dd.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca376.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c3ffe.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c4129.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c4298.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c4485.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c46ca.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7c4879.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca813.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7ca947.pdf', 'documentos/vhgJEmGDahtXe25t_673b7de7caa6f.pdf', '2024-11-18 17:48:23'),
-(5, 'lNtL5woVYgsrJjNZ', 4, 'documentos/lNtL5woVYgsrJjNZ_673c985024834.pdf', 'documentos/lNtL5woVYgsrJjNZ_673c985024bb4.pdf', 'documentos/lNtL5woVYgsrJjNZ_673c985024cf2.pdf', 'documentos/lNtL5woVYgsrJjNZ_673c985024e19.pdf', 'documentos/lNtL5woVYgsrJjNZ_673c985024f39.pdf', NULL, NULL, NULL, NULL, 'documentos/673c9c85bc591.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-11-19 13:53:20');
 
 -- --------------------------------------------------------
 
@@ -680,10 +661,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`EmailUser`, `SenhaUser`, `idUser`, `NomeCompleto`, `cargo`, `path`, `data_upload`, `nomeFoto`) VALUES
-('alan_usuario@endless.com', '$2y$10$0egsonzdX0BoW/cav5Ge9O/WBKk8UiAw0E/TJbTBVQIZ7l97bwFc.', 1, 'Alan Bezerra dos Santos', 'Corretor', 'arquivos/671a3d637b62c.jpg', '2024-10-02 13:46:03', 'endless2DcomFundo.jpg'),
-('vinicius_admin@endless.com', '$2y$10$XRO2717LWytCXLPkFnV6xOOHA2jNWOzb1fCvsNzcdgQeNpakRL1eq', 2, 'Vinicius da Silva Santos', 'Administrador', 'arquivos/670fb7dfd876f.png', '2024-10-08 14:52:50', 'endless3DsemFundo.png'),
-('murilo_usuario@endless.com', '$2y$10$.9PJGAotW.Cfsu8QxM1f7.13ZfyOae/vxkJNuw/xdLDsz8qopmI76', 3, 'Murilo Albieri Marques', 'Corretor', '', '2024-10-29 21:31:32', ''),
-('ericasantosconsultoria@endless.com', '$2y$10$rA9.phqIMq5HQxATc2Scpe9c69V1mMz2Te3q9ANrwUMZ8vfngVjcO', 4, 'Erica Danielle da Silva Santos', 'Corretor', 'arquivos/673c98c265403.jpg', '2024-11-19 14:48:11', 'foto_Erica.jpg');
+('vinicius_admin@endless.com', '$2y$10$XRO2717LWytCXLPkFnV6xOOHA2jNWOzb1fCvsNzcdgQeNpakRL1eq', 2, 'Vinicius da Silva Santos', 'Administrador', 'arquivos/670fb7dfd876f.png', '2024-10-08 14:52:50', 'endless3DsemFundo.png');
 
 --
 -- Índices para tabelas despejadas
