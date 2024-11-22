@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </header>
 
     <div class="topo_crm">
-        <h1>Inserir Usuários</h1>
+        <h1>Inserir Usuários:</h1>
     </div>
 
         <div class="container-docs">
